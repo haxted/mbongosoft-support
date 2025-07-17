@@ -18,7 +18,7 @@ function register() {
     users.push(newUser);
     localStorage.setItem("usrs", JSON.stringify(users));
     localStorage.setItem("usrcount", userCount);
-    localStorage.setItem("currentuid", currentUserId);
+    localStorage.setItem("currentuid", String(currentUserId));
     document.getElementById("loginreg").style.display = "none";
     document.getElementById("scam").style.display = "block";
     document.getElementById("congo").style.display = "block";
