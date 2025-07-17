@@ -23,3 +23,7 @@ function register() {
     document.getElementById("scam").style.display = "block";
     document.getElementById("congo").style.display = "block";
 }
+
+function killEveryone() {
+    localStorage.clear();
+}
