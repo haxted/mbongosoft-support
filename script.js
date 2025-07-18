@@ -49,7 +49,11 @@ function musa_sendMsg() {
         "What help u need",
         "Pls give card number",
         "DO NOT REDEEM",
-        "Helo i musa"
+        "Helo i musa",
+        "There is vairas inside your computer, pls allow me to acess it",
+        "I need to acess ur computer",
+        "r u deyr?",
+        "i need amazon gift card to continue pls"
     ];
     const chatDiv = document.getElementById("msgs");
     const container = document.createElement('div');
