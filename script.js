@@ -16,6 +16,7 @@ function register() {
     };
     userCount++;
     users.push(newUser);
+    currentUserId = newUser.userId;
     localStorage.setItem("usrs", JSON.stringify(users));
     localStorage.setItem("usrcount", userCount);
     localStorage.setItem("currentuid", String(currentUserId));
@@ -26,4 +27,9 @@ function register() {
 
 function killEveryone() {
     localStorage.clear();
+}
+
+function gotoForm() {
+    document.getElementById("scam").style.display = "none";
+    document.getElementById("scamForm").style.display = "block";
 }
