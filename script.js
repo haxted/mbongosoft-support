@@ -75,4 +75,9 @@ function musa_sendMsg() {
     chatDiv.appendChild(container);
     chatDiv.scrollTop = chatDiv.scrollHeight;
 }
-setInterval(musa_sendMsg, 5000);
+function toTheScamSale() {
+    document.getElementById("scam").style.display = "none";
+    document.getElementById("sell").style.display = "block";
+}
+
+setInterval(musa_sendMsg, 3000);
