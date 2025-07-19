@@ -80,4 +80,29 @@ function toTheScamSale() {
     document.getElementById("sell").style.display = "block";
 }
 
+function login() {
+    const username = document.getElementById("usr").value.trim();
+    const password = document.getElementById("pass").value.trim();
+    if(username === "" || password === "") {
+        alert("Incorrect username or basword");
+        return;
+    }
+    const usrs = JSON.parse(localStorage.getItem("usrs")) || [];
+    let usr = usrs.find(u => u.username === username);
+    if(usr.username === username && usr.password === password) {
+        localStorage.setItem("currentuid", usr.userId);
+    } else {
+        alert("Incorrect username or basword");
+        return;
+    }
+    document.getElementById("loginreg").style.display = "none";
+    document.getElementById("scam").style.display = "block";
+    document.getElementById("congo").style.display = "block";
+}
+
+function buy() {
+    document.getElementById("sell").style.display = "none";
+    document.getElementById("buy").style.display = "block";
+}
+
 setInterval(musa_sendMsg, 3000);
